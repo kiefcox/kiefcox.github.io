@@ -16,7 +16,7 @@ body {
 
 /* Header styling */
 header {
-    background-image: url('Images/Pic2.jpg'); /* Path to your image */
+    background-image: url('Pic2.jpg'); /* Path to your image */
     background-size: cover; /* Ensures the image covers the header */
     background-position: center; /* Centers the image */
     background-repeat: no-repeat; /* Prevents tiling */
