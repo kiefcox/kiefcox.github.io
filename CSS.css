@@ -1,0 +1,270 @@
+/* Reset default margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8; /* Light blue-gray background */
+    color: #333; /* Dark gray text */
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* Header styling */
+header {
+    background-image: url('Images/Pic2.jpg'); /* Path to your image */
+    background-size: cover; /* Ensures the image covers the header */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents tiling */
+    color: white; /* Text color */
+    padding: 40px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    position: relative; /* For overlay positioning */
+}
+
+/* Optional: Add a semi-transparent overlay for text readability */
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Dark overlay with 40% opacity */
+    z-index: 1;
+}
+
+/* Ensure text stays above the overlay */
+header h1, header p {
+    position: relative;
+    z-index: 2;
+}
+header h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Text shadow for depth */
+}
+
+header p {
+    font-size: 28px;
+    font-style: italic;
+}
+
+/* Navigation styling */
+nav {
+    background-color: #62a2bb; /* Dark teal for contrast */
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline-block; /* Inline-block for better spacing control */
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 15px; /* Padding for clickable area */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover transition */
+}
+
+nav ul li a:hover {
+    background-color: #a8ccda; /* Lighter teal on hover */
+    color: #fff;
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 36px;
+    }
+
+    header p {
+        font-size: 16px;
+    }
+
+    nav ul li {
+        display: block; /* Stack nav items vertically on small screens */
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+        padding: 8px 12px;
+    }
+}
+
+/* Content container styling */
+.content-container {
+    display: flex; /* Use Flexbox for side-by-side layout */
+    justify-content: center; /* Center the content */
+    align-items: center; /* Vertically align items */
+    max-width: 1200px; /* Limit container width */
+    margin: 40px auto; /* Center container with top/bottom margin */
+    padding: 20px;
+    background-color: white; /* White background for contrast */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border-radius: 10px; /* Rounded corners */
+}
+
+.text-content {
+    flex: 1; /* Takes up equal space with image */
+    padding: 20px;
+    text-align: left; /* Align text to the left */
+}
+
+.text-content h2 {
+    font-size: 32px;
+    color: #307591; /* Matches darker header gradient color */
+    margin-bottom: 15px;
+}
+
+.text-content p {
+    font-size: 18px;
+    color: #333; /* Dark gray text */
+}
+
+.image-content {
+    flex: 1; /* Takes up equal space with text */
+    padding: 20px;
+}
+
+.image-content img {
+    max-width: 100%; /* Ensures image scales responsively */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .content-container {
+        flex-direction: column; /* Stack text and image vertically */
+        margin: 20px auto; /* Reduce margin */
+        padding: 10px;
+    }
+
+    .text-content, .image-content {
+        padding: 10px; /* Reduce padding */
+    }
+
+    .text-content h2 {
+        font-size: 24px; /* Smaller heading */
+    }
+
+    .text-content p {
+        font-size: 16px; /* Smaller text */
+    }
+}
+
+.cta-button {
+    background-color: #62a2bb; /* Lighter teal matching nav hover */
+    color: white; /* White text */
+    border: none; /* Remove default border */
+    padding: 12px 24px; /* Vertical and horizontal padding */
+    font-size: 18px; /* Text size */
+    font-weight: 500; /* Medium weight */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Hand cursor on hover */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+    margin-top: 20px; /* Space above button */
+}
+
+.cta-button:hover {
+    background-color: #a8ccda; /* Darker teal on hover, matching header */
+    transform: scale(1.05); /* Slight scale-up effect on hover */
+}
+
+.cta-button:active {
+    transform: scale(0.95); /* Slight scale-down effect when clicked */
+}
+/* Footer styling */
+footer {
+    background-color: #62a2bb; /* Matches nav background */
+    color: white; /* White text */
+    padding: 20px 0; /* Vertical padding */
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow at top */
+}
+
+.footer-container {
+    display: flex; /* Use Flexbox for layout */
+    justify-content: space-between; /* Space out items */
+    align-items: center; /* Vertically center items */
+    max-width: 1200px; /* Limit width */
+    margin: 0 auto; /* Center container */
+    padding: 0 20px; /* Horizontal padding */
+}
+
+.footer-left, .footer-center, .footer-right {
+    flex: 1; /* Equal space for each section */
+    text-align: center; /* Center text by default */
+}
+
+.footer-left {
+    text-align: left; /* Left-align text */
+}
+
+.footer-right {
+    text-align: right; /* Right-align button */
+}
+
+.footer-link {
+    color: #25e6cf; /* Lighter teal for link */
+    text-decoration: none; /* Remove underline */
+    font-weight: 500; /* Medium weight */
+}
+
+.footer-link:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Party button styling */
+.party-button {
+    background-color: #fff9f9; /* Lighter teal */
+    color: rgb(21, 6, 33); /* White text */
+    border: none; /* Remove default border */
+    padding: 10px 20px; /* Vertical and horizontal padding */
+    font-size: 16px; /* Text size */
+    font-weight: 1000; /* Medium weight */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Hand cursor on hover */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+}
+
+.party-button:hover {
+    background-color: #307591; /* Darker teal on hover */
+    transform: scale(1.05); /* Slight scale-up effect on hover */
+}
+
+.party-button:active {
+    transform: scale(0.95); /* Slight scale-down effect when clicked */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* Stack items vertically */
+        padding: 10px; /* Reduce padding */
+    }
+
+    .footer-left, .footer-center, .footer-right {
+        text-align: center; /* Center all text on small screens */
+        margin: 10px 0; /* Add vertical spacing */
+    }
+}
+.text-content p {
+    margin-bottom: 20px; /* Adds space below each paragraph */
+}
